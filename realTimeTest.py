@@ -8,7 +8,7 @@ from PIL import Image
 
 
 model = YOLO("best.pt")  # pretrained
-video = cv2.VideoCapture('nepomicniTest.mp4')  # 0 iz kamere, 
+video = cv2.VideoCapture('nepomicniTest.mp4')  # 0 iz kamere 
 while video.isOpened():
     # Procitaj frame iz videa
     success, frame = video.read()
@@ -26,11 +26,11 @@ while video.isOpened():
         # Prikaz u prozoru
         cv2.imshow(
             "YOLOv8 Inference", annotated_frame
-        )  # cv2.imshow() is disabled in Colab, because it causes Jupyter sessions to crash, tako da se ovo pokrece lokalno annotated_frame
+        )  # cv2.imshow() nije omogucen u  Colab, uzrokuje da se Jupyter sesije crashaju , tako da se ovo pokrece lokalno
         if cv2.waitKey(1) == ord("q"):
             break
     else:
-        # Ako je kraj videa ili klik na q
+       
         break
 
 
